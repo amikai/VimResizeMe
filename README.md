@@ -2,6 +2,7 @@
 Resize window with ease.
 ## Usage
 ![vert](./screenshot/vert_split.png)
+
 | Window/Action | :VrmResizeRight  | :VrmResizeLeft  |
 |---------------|------------------|-----------------|
 | A             | move alpha right | move alpha left |
@@ -9,6 +10,7 @@ Resize window with ease.
 | C             | move beta  right | move beta  left |
 
 ![horiz](/screenshot/horizon_split.png)
+
 | Window/Action | :VrmResizeUp  | :VrmResizeDown  |
 |---------------|---------------|-----------------|
 | D             | move gamma up | move gamma down |
