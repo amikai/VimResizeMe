@@ -41,7 +41,7 @@ In macOS:
 So I suggest following mapping:
 ```
 nnoremap <PageUp> :VrmResizeUp<CR>
-nnoremap <PageDown>:VrmResizeDown<CR>
+nnoremap <PageDown> :VrmResizeDown<CR>
 nnoremap <Home> :VrmResizeRight<CR>
 nnoremap <End> :VrmResizeLeft<CR>
 ```
