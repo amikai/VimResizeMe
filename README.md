@@ -37,15 +37,15 @@ In macOS:
 `<fn>` + `<Left>` =` <End>`
 So I suggest following mapping:
 ```
-nnoremap <PageUp> :VrmResizeUp
-nnoremap <PageDown>:VrmResizeDown
-nnoremap <Home> :VrmResizeRight
-nnoremap <End> :VrmResizeLeft
+nnoremap <PageUp> :VrmResizeUp<CR>
+nnoremap <PageDown>:VrmResizeDown<CR>
+nnoremap <Home> :VrmResizeRight<CR>
+nnoremap <End> :VrmResizeLeft<CR>
 ```
 Others:
 ```
-nnoremap <C-Up> :VrmResizeUp
-nnoremap <C-Down>:VrmResizeDown
-nnoremap <C-Right> :VrmResizeRight
-nnoremap <C-Left> :VrmResizeLeft
+nnoremap <C-Up> :VrmResizeUp<CR>
+nnoremap <C-Down>:VrmResizeDown<CR>
+nnoremap <C-Right> :VrmResizeRight<CR>
+nnoremap <C-Left> :VrmResizeLeft<CR>
 ```
