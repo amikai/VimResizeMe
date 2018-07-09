@@ -1,0 +1,146 @@
+ *vimresizeme.txt*  Resize window with ease
+     _    ___           ____            _            __  ___   
+    | |  / (_)___ ___  / __ \___  _____(_)___  ___  /  |/  /__ 
+    | | / / / __ `__ \/ /_/ / _ \/ ___/ /__ / / _ \/ /|_/ / _ \
+    | |/ / / / / / / / _, _/  __(__  ) / / /_/  __/ /  / /  __/
+    |___/_/_/ /_/ /_/_/ |_|\_\___/____/_/ /___/\___/_/  /_/\___/ 
+
+==============================================================================
+CONTENTS                                                *vimresizeme-contents*
+
+    1. Introduction ................ |vimresizeme-introduction|
+    2. Commands ............. |vimresizeme-commands|
+
+==============================================================================
+INTRODUCTION                                        *vimresizeme-introduction*
+
+  | leftmost window |        |    nth window   |        |rightmost window |
+  +-----------------+--------+-----------------+--------+-----------------+
+  |                 |        |                 |        |                 |
+  |                 |        |                 |        |                 |
+  |                 |        |                 |        |                 |
+  |  .----------.   |        |  .----------.   |        |  .----------.   |
+  |  | Window A |\  | ...... |  | Window B |\  | ...... |  | Window C |\  |
+  |  .----------. | |        |  .----------. | |        |  .----------. | |
+  |  \___________\| |        |  \___________\| |        |  \___________\| |
+  |                 |        |                 |        |                 |
+  |                 |        |                 |        |                 |
+  |                 |        |                 |        |                 |
+  +-----------------+--------+-----------------+--------+-----------------+
+                    ^        ^                 ^        ^
+                    |        |                 |        |
+                  alpha     alpha'           beta'     beta
+
+        Note: alpha, alpha', beta and beta' are vertical split lines.
+
+Why use this plugin? (i)
+    * In window C
+      Vim built-in resize: Use |CTRL-W_<| in Window C will "move beta right",
+      and use |CTRL-W_>| will "move beta right", it is something werid and
+      doesn't make sense, because "<" sign often mean "left" and ">" often
+      mean "right".
+
+      This plugin provide: Use |:VrmResizeLeft| will move beta left and use
+      |:VrmResizeRight| will  move beta right.
+    
+    * In window B
+      Vim built-in resize: Use |CTRL-W_<| in Window B will move beta' left,
+      and use |CTRL-W_>| will move beta' right, it always move the beta' line
+      and doesn't make sense.
+
+      This plugin provide: Use |:VrmResizeLeft| will move alpha' left and use
+      |:VrmResizeRight| will  move beta' right.
+
+    * In window A
+      Using |CTRL-W_<| and |CTRL-W_>| are intuitive. But we need the commom
+      interface.  Vim built-in resize: Use |CTRL-W_<| in Window B will move
+      alpha left, and use |CTRL-W_>| will move alpha right.
+
+      This plugin provide: Use |:VrmResizeLeft| will move alpha left and use
+      |:VrmResizeRight| will  move alpha right.
+
+
+        +-----------------------------------+   -
+        |           .----------.            |   |
+        |           | Window D |\           |   |  top window
+        |           .----------. |          |   |
+        |           \___________\|          |   |
+        +-----------------------------------+ <---- gamma
+        |                 .                 |
+        |                 .                 |
+        +-----------------------------------+ <---- gamma'
+        |           .----------.            |   |
+        |           | Window E |\           |   |  nth window
+        |           .----------. |          |   |
+        |           \___________\|          |   |
+        +-----------------------------------+ <---- delta'
+        |                 .                 |
+        |                 .                 |
+        +-----------------------------------+ <---- delta
+        |           .----------.            |   |
+        |           | Window F |\           |   |
+        |           .----------. |          |   |  bottom window
+        |           \___________\|          |   |
+        +-----------------------------------+   -
+
+    Note: alpha, alpha', beta and beta' are vertical split lines.
+
+Why use this plugin? (ii)
+    The situation is similar as above.
+    * In window D
+      Vim built-in resize: Use |CTRL-W_+| will move gamma down, and use
+      |CTRL-W_-| will move gamma up.  
+
+      This plugin provide: Use |:VrmResizeDown| will move gamma down and use
+      |:VrmResizeUp| will move gamma up.
+
+    * In window E
+      Vim built-in resize: Use |CTRL-W_+| will move delta' down, and use
+      |CTRL-W_-| will move delta' up.  
+
+      This plugin provide: Use |:VrmResizeDown| will move delta' down and use
+      |:VrmResizeUp| will  move  gamma' up.
+
+     * In window F
+       Vim built-in resize: Use |CTRL-W_+| will move delta up, and use
+       |CTRL-W_-| will move delta down.
+
+       This plugin provide: Use |:VrmResizeDown| will move delta down and use
+       |:VrmResizeUp| will  move delta up.
+  
+==============================================================================
+COMMANDS                                                *vimresizeme-commands*
+
+:VrmResizeRight                                  *vimresizeme-:VrmResizeRight*
+
+        Window  | movement
+        --------+------------------
+        A       | move alpha right
+        B       | move beta' right
+        C       | move beta  right
+
+:VrmResizeLeft                                    *vimresizeme-:VrmResizeLeft*
+
+        Window  | movement
+        --------+------------------
+        A       | move alpha  left
+        B       | move alpha' left
+        C       | move beta   left
+
+:VrmResizeUp                                        *vimresizeme-:VrmResizeUp*
+
+        Window  | movement
+        --------+------------------
+        D       | move gamma  up
+        E       | move gamma' up
+        F       | move delta  up
+        
+:VrmResizeDown                                    *vimresizeme-:VrmResizeDown*
+
+        Window  | movement
+        --------+------------------
+        D       | move gamma  down
+        E       | move delta' down
+        F       | move delta  down
+
+ vim: tw=78 ts=8 sw=4 sts=4 et ft=help
