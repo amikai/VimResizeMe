@@ -9,7 +9,7 @@ Resize window with ease.
 | B             | move beta  right | move alpha left |
 | C             | move beta  right | move beta  left |
 
-![horiz](/screenshot/horizon_split.png)
+![horiz](/screenshot/horizon_split.png)
 
 | Window/Action | :VrmResizeUp  | :VrmResizeDown  |
 |---------------|---------------|-----------------|
