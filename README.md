@@ -31,10 +31,10 @@ Plugin 'amikai/VimResizeMe'
 ```
 ## Key mapping
 In macOS:
-`<fn>` + `<Up>` = `<PageUp>`
-`<fn>` + `<Down>` = `<PageDown>`
-`<fn>` + `<Right>` = `<Home>`
-`<fn>` + `<Left>` =` <End>`
+    - `<fn>` + `<Up>` = `<PageUp>`
+    - `<fn>` + `<Down>` = `<PageDown>`
+    - `<fn>` + `<Right>` = `<Home>`
+    - `<fn>` + `<Left>` =` <End>`
 So I suggest following mapping:
 ```
 nnoremap <PageUp> :VrmResizeUp<CR>
