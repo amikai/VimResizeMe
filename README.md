@@ -37,6 +37,7 @@ In macOS:
 - `<fn>` + `<Down>` = `<PageDown>`
 - `<fn>` + `<Right>` = `<Home>`
 - `<fn>` + `<Left>` =` <End>`
+
 So I suggest following mapping:
 ```
 nnoremap <PageUp> :VrmResizeUp<CR>
