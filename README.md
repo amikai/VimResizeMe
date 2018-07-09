@@ -16,6 +16,8 @@ Resize window with ease.
 | D             | move gamma up | move gamma down |
 | E             | move gamma up | move delta down |
 | F             | move delta up | move delta down |
+
+See the `:help vimresizeme` for details.
 ## Installation
 For vim-plug:
 ```
